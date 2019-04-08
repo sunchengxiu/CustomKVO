@@ -158,7 +158,7 @@ static void KVO_FireSetter(id self,SEL _cmd , id newValue){
     unsigned int count;
     Class selfClass = objc_getClass((__bridge void *)self);
     Method *methodList = class_copyMethodList(selfClass, &count);
-    for (NSInteger i = 0; i < 0 ; i ++) {
+    for (NSInteger i = 0; i < count ; i ++) {
         SEL _sel = method_getName(methodList[i]);
         if (_sel == selector) {
             free(methodList);
